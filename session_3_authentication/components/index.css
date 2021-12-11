@@ -1,21 +1,26 @@
-html, body{
+html, body {
     font-family: sans-serif;
     margin: 0;
     padding: 0;
 }
-.input-group{
+
+.input-group {
     margin: 10px 0;
 }
-.input-group.has-error input{
+
+.input-group.has-error input {
     border: 1px solid red;
     color: red;
     outline: red;
 }
-.error-msg{
-    font-size: 120px;
+
+.error-msg {
+    font-size: 12px;
     font-style: italic;
     color: red;
 }
+
+
 .input-group input {
     padding: 5px 8px;
     margin: 3px 0;
@@ -23,14 +28,17 @@ html, body{
     border-radius: 5px;
     border: 1px solid #555;
 }
-.center{
+
+.center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.h-screen{
+
+.h-screen {
     height: 100vh;
 }
-.flex-col{
+
+.flex-col {
     flex-direction: column;
 }

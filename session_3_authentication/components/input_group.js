@@ -12,18 +12,21 @@ class InputGroup {
         this.$input.type = type;
         this.$input.name = name;
 
-        this.$label = document.createElement('label')
+        this.$label = document.createElement('label');
         this.$label.innerHTML = label;
 
         this.$errorMsg = document.createElement('div');
         this.$errorMsg.classList.add('error-msg');
+
     }
     getInputValue() {
         return this.$input.value;
     }
-    setInputValue() {
+
+    setInputValue(newValue) {
         this.$input.value = newValue;
     }
+
     setError(message) {
         if (message) {
             this.$errorMsg.innerHTML = message;
@@ -33,11 +36,14 @@ class InputGroup {
             this.$container.classList.remove('has-error');
         }
     }
+
     render() {
         this.$label.appendChild(this.$input);
         this.$container.appendChild(this.$label);
         this.$container.appendChild(this.$errorMsg);
-        return this.$container
+        return this.$container;
     }
 }
+
+
 export { InputGroup }

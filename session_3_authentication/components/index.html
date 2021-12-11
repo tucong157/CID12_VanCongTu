@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +8,31 @@
     <title>Session 3</title>
     <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
     <div id="app"></div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-auth.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+        // Your web app's Firebase configuration
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyB3dnGZ5B11xPJ-IFsQGvzeVibmEuNmCLg",
+            authDomain: "chat-ci-d12-1d596.firebaseapp.com",
+            projectId: "chat-ci-d12-1d596",
+            storageBucket: "chat-ci-d12-1d596.appspot.com",
+            messagingSenderId: "648072841119",
+            appId: "1:648072841119:web:dd735fc4dbd7dcbc171faa"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
     <script src="index.js" type="module"></script>
 </body>
+
 </html>
