@@ -37,12 +37,12 @@ class InputGroup {
         }
     }
 
-    render() {
-        this.$label.appendChild(this.$input);
-        this.$container.appendChild(this.$label);
-        this.$container.appendChild(this.$errorMsg);
-        return this.$container;
-    }
+render() {
+    this.$label.appendChild(this.$input);
+    this.$container.appendChild(this.$label);
+    this.$container.appendChild(this.$errorMsg);
+    return this.$container;
+}
 }
 
 
