@@ -59,7 +59,22 @@ class Register {
         if (confirmPassword != password) {
             this.$inputGroupConfirmPassword.setError('Confirm password not matched!');
         }
-    }
+        firebase.auth().createUserWithEmailAndPassword(email, password)
+            .then(() => {
+                this.$feedbackMessage.innerHTML = 'Register successfully! Please check your inbox';
+                firebase.auth().currentUser.sendEmailVerification();
+                this.$inputGroupEmail.setInputValue('');
+                this.$inputGroupDisplayName.setInputValue('');
+                this.$inputGroupPassword.setInputValue('');
+                this.$inputGroupConfirmPassword.setInputValue('');
+            })
+            .catch((error) => {
+                this.$feedbackMessage.innerHTML = error.toString();
+                console.log(error);
+            });
+    };
+
+
     render() {
         this.$formRegister.appendChild(this.$inputGroupEmail.render());
         this.$formRegister.appendChild(this.$inputGroupDisplayName.render());
